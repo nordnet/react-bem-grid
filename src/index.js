@@ -1,3 +1,3 @@
-export { Grid } from './Grid.jsx';
-export { Row } from './Row.jsx';
-export { Col } from './Col.jsx';
+export { Grid } from './Grid';
+export { Row } from './Row';
+export { Col } from './Col';
