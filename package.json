@@ -1,0 +1,68 @@
+{
+  "name": "react-bem-grid",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "transpile": "babel src --out-dir dist",
+    "sass": "node-sass src -o dist",
+    "autoprefixer": "postcss --use autoprefixer -o dist/Grid.css dist/Grid.css",
+    "styles": "npm run sass && npm run autoprefixer",
+    "eslint": "eslint --ext=.jsx --ext=.js -c .eslintrc src",
+    "jscs": "jscs -c .jscsrc src",
+    "lint": "npm run jscs && npm run eslint",
+    "prelint:jenkins": "rimraf reports/lintresult.xml && mkdir -p reports",
+    "lint:jenkins": "npm run jscs && eslint -c .eslintrc src -f checkstyle -o reports/lintresult.xml",
+    "pretest": "rimraf reports && mkdirp reports",
+    "test": "mocha --require babel/register --recursive test",
+    "posttest": "npm run reports",
+    "prereports": "echo '<?xml version=\"1.0\"?>' > reports/test-results.xml",
+    "reports": "mocha --require babel/register --reporter XUnit --recursive test | grep \"<\" >> reports/test-results.xml",
+    "tdd": "npm test -- --watch",
+    "validate": "npm run lint && npm test",
+    "prepush": "npm run validate",
+    "prepublish": "npm run transpile",
+    "postpublish": "rimraf dist && git push --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "nordnet",
+    "react",
+    "bem",
+    "flexbox",
+    "grid"
+  ],
+  "author": "Gustaf Zetterlund <gustaf.zetterlund@nordnet.se>",
+  "dependencies": {
+    "classnames": "^2.1.3",
+    "react": "^0.13.3",
+    "shallowequal": "^0.2.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^5.2.0",
+    "babel": "^5.5.8",
+    "babel-core": "^5.6.18",
+    "babel-eslint": "^3.1.23",
+    "babel-jscs": "^2.0.3",
+    "chai": "^3.0.0",
+    "chai-as-promised": "^5.1.0",
+    "eslint": "^0.24.0",
+    "eslint-config-airbnb": "0.0.6",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "husky": "^0.8.1",
+    "isparta": "^3.0.3",
+    "jscs": "jscs-dev/node-jscs#c5adeba",
+    "jscs-jsdoc": "^1.1.0",
+    "mkdirp": "^0.5.1",
+    "mocha": "^2.2.5",
+    "node-sass": "^3.2.0",
+    "postcss-cli": "^1.5.0",
+    "rimraf": "^2.3.4",
+    "sinon": "^1.15.4",
+    "sinon-chai": "^2.8.0"
+  }
+}
