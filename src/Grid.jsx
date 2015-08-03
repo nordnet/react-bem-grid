@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 class Grid extends PureComponent {
   render() {
-    let classes = classNames({
+    const classes = classNames({
       'grid': !this.props.fluid,
       'grid--fluid': this.props.fluid,
     }, this.props.className);
@@ -19,6 +19,8 @@ class Grid extends PureComponent {
 
 Grid.propTypes = {
   fluid: React.PropTypes.bool,
+  className: React.PropTypes.string,
+  children: React.PropTypes.node,
 };
 
 Grid.defaultProps = { };

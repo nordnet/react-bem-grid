@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 class Col extends PureComponent {
   render() {
-    let classes = classNames({
+    const classes = classNames({
       ['grid__col--xs' + (Number.isNaN(parseFloat(this.props.xs)) ? '' : '-' + this.props.xs)]: this.props.xs >= 0,
       ['grid__col--sm' + (Number.isNaN(parseFloat(this.props.sm)) ? '' : '-' + this.props.sm)]: this.props.sm >= 0,
       ['grid__col--md' + (Number.isNaN(parseFloat(this.props.md)) ? '' : '-' + this.props.md)]: this.props.md >= 0,
@@ -37,6 +37,9 @@ class Col extends PureComponent {
 }
 
 Col.propTypes = {
+  className: React.PropTypes.string,
+  children: React.PropTypes.node,
+
   xs: React.PropTypes.oneOfType([
     React.PropTypes.number,
     React.PropTypes.bool,

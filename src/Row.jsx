@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 class Row extends PureComponent {
   render() {
-    let classes = classNames({
+    const classes = classNames({
       'grid__row': true,
       'grid__row--reverse': this.props.reverse,
 
@@ -59,6 +59,8 @@ class Row extends PureComponent {
 
 Row.propTypes = {
   reverse: React.PropTypes.bool,
+  className: React.PropTypes.string,
+  children: React.PropTypes.node,
 
   xsStart: React.PropTypes.bool,
   smStart: React.PropTypes.bool,
