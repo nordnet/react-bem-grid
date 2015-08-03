@@ -1,3 +1,9 @@
-export { Grid } from './Grid';
-export { Row } from './Row';
-export { Col } from './Col';
+import Row from './Row';
+import Col from './Col';
+import Grid from './Grid';
+
+export default {
+  Row: Row,
+  Col: Col,
+  Grid: Grid
+};

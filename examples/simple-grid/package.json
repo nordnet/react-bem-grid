@@ -1,0 +1,25 @@
+{
+  "name": "react-bem-grid-example",
+  "version": "1.0.0",
+  "description": "Simple react-bem-grid example",
+  "config": {
+    "dev_server": {
+      "host": "localhost",
+      "port": 9000
+    }
+  },
+  "scripts": {
+    "start": "node webpack/webpack-dev-server.js"
+  },
+  "dependencies": {
+    "react": "^0.13.3"
+  },
+  "devDependencies": {
+    "babel": "^5.8.20",
+    "babel-loader": "^5.3.2",
+    "opn": "^3.0.2",
+    "react-hot-loader": "^1.2.7",
+    "webpack": "^1.9.11",
+    "webpack-dev-server": "^1.9.0"
+  }
+}
