@@ -1,35 +1,50 @@
-# react-bem-grid
+# React BEM Grid
 
-> 
+### NPM
 
-## Install
-
-    npm install --save react-bem-grid
+```sh
+npm install --save react-bem-grid
+```
 
 ## Usage
 
 ```js
-import reactBemGrid from 'react-bem-grid';
+import React from 'react';
+import { Row, Col, Grid } from 'react-bem-grid';
 
-reactBemGrid('unicorns'); // unicorns
+class GridExample extends React.Component {
+  render() {
+    return (
+      <Grid fluid>
+        <Row>
+          <Col xs={6} sm={4} lg xsOffset={3} smOffset={4} xsLast smLast>
+            <div>Items</div>
+          </Col>
+        </Row>
+      </Grid>
+    );
+  }
+}
 ```
 
-## API
+## Example projects
 
-### reactBemGrid(input, [options])
+First, clone react-bem-grid, install depenencies and build the project:
 
-#### input
+```
+git clone https://github.com/nordnet/react-bem-grid.git
+npm install
+npm run build
+```
 
-*Required*  
-Type: `String`
+Then run the simple-grid example project:
 
-Lorem ipsum.
+```
+cd examples/simple-grid
+npm install
+npm start
+```
 
-#### options
+## License
 
-##### foo
-
-Type: `Boolean`  
-Default: `false`
-
-Lorem ipsum.
+This open source project released by Nordnet is licenced under the MIT licence.
