@@ -1,5 +1,10 @@
 # React BEM Grid
 
+[![NPM version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Coveralls Status][coveralls-image]][coveralls-url]
+[![Dependency Status][depstat-image]][depstat-url]
+
 ### NPM
 
 ```sh
@@ -47,4 +52,16 @@ npm start
 
 ## License
 
-This open source project released by Nordnet is licenced under the MIT licence.
+MIT © [Nordnet Bank AB](https://www.nordnet.se/)
+
+[npm-url]: https://npmjs.org/package/react-bem-grid
+[npm-image]: https://img.shields.io/npm/v/react-bem-grid.svg?style=flat-square
+
+[travis-url]: https://travis-ci.org/nordnet/react-bem-grid
+[travis-image]: https://img.shields.io/travis/nordnet/react-bem-grid.svg?style=flat-square
+
+[coveralls-url]: https://coveralls.io/r/nordnet/react-bem-grid
+[coveralls-image]: https://img.shields.io/coveralls/nordnet/react-bem-grid.svg?style=flat-square
+
+[depstat-url]: https://david-dm.org/nordnet/react-bem-grid
+[depstat-image]: https://david-dm.org/nordnet/react-bem-grid.svg?style=flat-square
