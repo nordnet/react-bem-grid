@@ -14,7 +14,7 @@
     "jscs": "jscs src",
     "lint": "npm-run-all jsc eslint",
     "pretest": "rimraf reports && mkdirp reports",
-    "test": "mocha --require babel/register --recursive test",
+    "test": "mocha",
     "posttest": "npm run reports",
     "prereports": "echo '<?xml version=\"1.0\"?>' > reports/test-results.xml",
     "reports": "mocha --require babel/register --reporter xunit --recursive test | grep \"<\" >> reports/test-results.xml",
