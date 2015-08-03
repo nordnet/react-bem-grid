@@ -10,7 +10,7 @@ class Grid extends PureComponent {
     }, this.props.className);
 
     return (
-      <div className={ classes }>
+      <div className={ classes } style={ this.props.style }>
         { this.props.children }
       </div>
     );
