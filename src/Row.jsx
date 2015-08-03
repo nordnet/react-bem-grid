@@ -55,7 +55,7 @@ class Row extends PureComponent {
       </div>
     );
   }
-};
+}
 
 Row.propTypes = {
   reverse: React.PropTypes.bool,
@@ -98,7 +98,7 @@ Row.propTypes = {
   xsBetween: React.PropTypes.bool,
   smBetween: React.PropTypes.bool,
   mdBetween: React.PropTypes.bool,
-  lgBetween: React.PropTypes.bool
+  lgBetween: React.PropTypes.bool,
 };
 
 Row.defaultProps = { };

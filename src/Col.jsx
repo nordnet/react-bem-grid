@@ -25,7 +25,7 @@ class Col extends PureComponent {
       'grid__col--xs-last': this.props.xsLast,
       'grid__col--sm-last': this.props.smLast,
       'grid__col--md-last': this.props.mdLast,
-      'grid__col--lg-last': this.props.lgLast
+      'grid__col--lg-last': this.props.lgLast,
     }, this.props.className);
 
     return (
@@ -34,24 +34,24 @@ class Col extends PureComponent {
       </div>
     );
   }
-};
+}
 
 Col.propTypes = {
   xs: React.PropTypes.oneOfType([
     React.PropTypes.number,
-    React.PropTypes.bool
+    React.PropTypes.bool,
   ]),
   sm: React.PropTypes.oneOfType([
     React.PropTypes.number,
-    React.PropTypes.bool
+    React.PropTypes.bool,
   ]),
   md: React.PropTypes.oneOfType([
     React.PropTypes.number,
-    React.PropTypes.bool
+    React.PropTypes.bool,
   ]),
   lg: React.PropTypes.oneOfType([
     React.PropTypes.number,
-    React.PropTypes.bool
+    React.PropTypes.bool,
   ]),
 
   xsOffset: React.PropTypes.number,
@@ -69,9 +69,9 @@ Col.propTypes = {
   xsLast: React.PropTypes.bool,
   smLast: React.PropTypes.bool,
   mdLast: React.PropTypes.bool,
-  lgLast: React.PropTypes.bool
+  lgLast: React.PropTypes.bool,
 };
 
-Col.defaultProps = { };
+Col.defaultProps = {};
 
 export default Col;

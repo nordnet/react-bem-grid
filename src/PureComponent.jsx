@@ -23,6 +23,6 @@ class PureComponent extends React.Component {
   shouldComponentUpdate(nextProps, nextState) {
     return this.shallowCompare(this, nextProps, nextState);
   }
-};
+}
 
 export default PureComponent;
