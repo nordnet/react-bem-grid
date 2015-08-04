@@ -60,6 +60,7 @@ class Row extends PureComponent {
 Row.propTypes = {
   reverse: React.PropTypes.bool,
   className: React.PropTypes.string,
+  style: React.PropTypes.object,
   children: React.PropTypes.node,
 
   xsStart: React.PropTypes.bool,
