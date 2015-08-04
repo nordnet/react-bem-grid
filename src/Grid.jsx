@@ -1,18 +1,21 @@
 import React from 'react';
 import PureComponent from './PureComponent';
 import classNames from 'classnames';
+import { elementType } from 'react-prop-types';
 
 class Grid extends PureComponent {
   render() {
+    const ComponentClass = this.props.componentClass;
+
     const classes = classNames({
       'grid': !this.props.fluid,
       'grid--fluid': this.props.fluid,
     }, this.props.className);
 
     return (
-      <div className={ classes } style={ this.props.style }>
+      <ComponentClass className={ classes } style={ this.props.style }>
         { this.props.children }
-      </div>
+      </ComponentClass>
     );
   }
 }
@@ -22,8 +25,11 @@ Grid.propTypes = {
   className: React.PropTypes.string,
   style: React.PropTypes.object,
   children: React.PropTypes.node,
+  componentClass: elementType,
 };
 
-Grid.defaultProps = { };
+Grid.defaultProps = {
+  componentClass: 'div',
+};
 
 export default Grid;

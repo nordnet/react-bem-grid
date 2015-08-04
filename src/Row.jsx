@@ -1,9 +1,12 @@
 import React from 'react';
 import PureComponent from './PureComponent';
 import classNames from 'classnames';
+import { elementType } from 'react-prop-types';
 
 class Row extends PureComponent {
   render() {
+    const ComponentClass = this.props.componentClass;
+
     const classes = classNames({
       'grid__row': true,
       'grid__row--reverse': this.props.reverse,
@@ -50,9 +53,9 @@ class Row extends PureComponent {
     }, this.props.className);
 
     return (
-      <div className={ classes } style={ this.props.style }>
+      <ComponentClass className={ classes } style={ this.props.style }>
         { this.props.children }
-      </div>
+      </ComponentClass>
     );
   }
 }
@@ -62,6 +65,7 @@ Row.propTypes = {
   className: React.PropTypes.string,
   style: React.PropTypes.object,
   children: React.PropTypes.node,
+  componentClass: elementType,
 
   xsStart: React.PropTypes.bool,
   smStart: React.PropTypes.bool,
@@ -104,6 +108,8 @@ Row.propTypes = {
   lgBetween: React.PropTypes.bool,
 };
 
-Row.defaultProps = { };
+Row.defaultProps = {
+  componentClass: 'div',
+};
 
 export default Row;

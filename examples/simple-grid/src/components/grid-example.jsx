@@ -12,6 +12,15 @@ class GridExample extends React.Component {
 
     return (
       <Grid fluid>
+        <Row componentClass='nav'>
+          <Col xs={4}>
+            <div style={ boxStyle }></div>
+          </Col>
+          <Col xs={4} xsOffset={4}>
+            <div style={ boxStyle }></div>
+          </Col>
+        </Row>
+
         <Row>
           <Col xs={12} sm={3} md={2} lg={1}>
             <div style={ boxStyle }></div>

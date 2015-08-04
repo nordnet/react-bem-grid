@@ -22,4 +22,9 @@ describe('Col', () => {
     beforeEach(() => component = createComponent(Col, { className: 'app' }));
     it('should have expected className', () => expect(component.props.className).to.equal('app'));
   });
+
+  describe('when componentClass is set via props', () => {
+    beforeEach(() => component = createComponent(Col, { componentClass: 'nav' }));
+    it('should have expected elementType', () => expect(component.type).to.equal('nav'));
+  });
 });

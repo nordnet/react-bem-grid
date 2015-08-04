@@ -1,9 +1,12 @@
 import React from 'react';
 import PureComponent from './PureComponent';
 import classNames from 'classnames';
+import { elementType } from 'react-prop-types';
 
 class Col extends PureComponent {
   render() {
+    const ComponentClass = this.props.componentClass;
+
     const classes = classNames({
       ['grid__col--xs' + (Number.isNaN(parseFloat(this.props.xs)) ? '' : '-' + this.props.xs)]: this.props.xs >= 0,
       ['grid__col--sm' + (Number.isNaN(parseFloat(this.props.sm)) ? '' : '-' + this.props.sm)]: this.props.sm >= 0,
@@ -29,9 +32,9 @@ class Col extends PureComponent {
     }, this.props.className);
 
     return (
-      <div className={ classes } style={ this.props.style }>
+      <ComponentClass className={ classes } style={ this.props.style }>
         { this.props.children }
-      </div>
+      </ComponentClass>
     );
   }
 }
@@ -40,6 +43,7 @@ Col.propTypes = {
   className: React.PropTypes.string,
   style: React.PropTypes.object,
   children: React.PropTypes.node,
+  componentClass: elementType,
 
   xs: React.PropTypes.oneOfType([
     React.PropTypes.number,
@@ -76,6 +80,8 @@ Col.propTypes = {
   lgLast: React.PropTypes.bool,
 };
 
-Col.defaultProps = {};
+Col.defaultProps = {
+  componentClass: 'div',
+};
 
 export default Col;

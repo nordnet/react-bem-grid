@@ -103,6 +103,21 @@ Nest grids inside grids inside grids.
 </Grid>
 ```
 
+### Custom Element Type
+Add the componentClass property to override the default element type of a Grid, Row or Col.
+```js
+<Grid>
+  <Row componentClass='nav'>
+    <Col xs={6}>
+      ...
+    </Col>
+    <Col xs={6}>
+      ...
+    </Col>
+  </Row>
+</Grid>
+```
+
 ### Alignment
 Add properties to align elements to the start or end of a row as well as the top, bottom, or center of a column.
 
