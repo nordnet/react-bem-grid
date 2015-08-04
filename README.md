@@ -5,6 +5,8 @@
 [![Coveralls Status][coveralls-image]][coveralls-url]
 [![Dependency Status][depstat-image]][depstat-url]
 
+A BEM-ified port of [Flexbox Grid](http://flexboxgrid.com) to a simple, reusable React component.
+
 ### NPM
 
 ```sh
@@ -20,10 +22,16 @@ import { Row, Col, Grid } from 'react-bem-grid';
 class GridExample extends React.Component {
   render() {
     return (
-      <Grid fluid>
+      <Grid>
         <Row>
-          <Col xs={6} sm={4} lg xsOffset={3} smOffset={4} xsLast smLast>
-            <div>Items</div>
+          <Col xs={12} sm={6} lg={4}>
+            ...
+          </Col>
+          <Col xs={12} sm={6} lg={4}>
+            ...
+          </Col>
+          <Col xs={12} sm={6} lg={4}>
+            ...
           </Col>
         </Row>
       </Grid>
@@ -32,11 +40,245 @@ class GridExample extends React.Component {
 }
 ```
 
-## Example projects
+## Documentation
 
-First, clone react-bem-grid, install depenencies and build the project:
-
+### Responsive
+Responsive modifiers enable specifying different column sizes, offsets, alignment and distribution at xs, sm, md & lg viewport widths.
+```js
+<Grid>
+  <Row>
+    <Col xs={12} sm={8} md={6} lg={4}>
+      ...
+    </Col>
+  </Row>
+</Grid>
 ```
+
+### Offsets
+Offset a column.
+```js
+<Grid>
+  <Row>
+    <Col xs={8} xsOffset={4} sm={6} smOffset={6} lg={12}>
+      ...
+    </Col>
+  </Row>
+</Grid>
+```
+
+### Auto Width
+Add any number of auto sizing columns to a row. Let the grid figure it out.
+```js
+<Grid>
+  <Row>
+    <Col xs>
+      ...
+    </Col>
+    <Col xs>
+      ...
+    </Col>
+    <Col xs>
+      ...
+    </Col>
+  </Row>
+</Grid>
+```
+
+### Nested Grids
+Nest grids inside grids inside grids.
+```js
+<Grid>
+  <Row>
+    <Col xs={12}>
+      <Row>
+        <Col xs={6}>
+          ...
+        </Col>
+        <Col xs={6}>
+          ...
+        </Col>
+      </Row>
+    </Col>
+  </Row>
+</Grid>
+```
+
+### Alignment
+Add properties to align elements to the start or end of a row as well as the top, bottom, or center of a column.
+
+#### Start
+```js
+<Grid>
+  <Row xsStart>
+    <Col xs={6}>
+      ...
+    </Col>
+  </Row>
+</Grid>
+```
+
+#### Center
+```js
+<Grid>
+  <Row xsCenter>
+    <Col xs={6}>
+      ...
+    </Col>
+  </Row>
+</Grid>
+```
+
+#### End
+```js
+<Grid>
+  <Row xsEnd>
+    <Col xs={6}>
+      ...
+    </Col>
+  </Row>
+</Grid>
+```
+
+**Here is an example of using the modifiers in conjunction to achieve different alignment at different viewport sizes.**
+```js
+<Grid>
+  <Row xsCenter smEnd lgStart>
+    <Col xs={6}>
+      ...
+    </Col>
+  </Row>
+</Grid>
+```
+
+#### Top
+```js
+<Grid>
+  <Row xsTop>
+    <Col xs={6}>
+      ...
+    </Col>
+  </Row>
+</Grid>
+```
+
+#### Middle
+```js
+<Grid>
+  <Row xsMiddle>
+    <Col xs={6}>
+      ...
+    </Col>
+  </Row>
+</Grid>
+```
+
+#### Bottom
+```js
+<Grid>
+  <Row xsBottom>
+    <Col xs={6}>
+      ...
+    </Col>
+  </Row>
+</Grid>
+```
+
+### Distribution
+Add properties to distribute the contents of a row or column.
+
+#### Around
+```js
+<Grid>
+  <Row xsAround>
+    <Col xs={2}>
+      ...
+    </Col>
+    <Col xs={2}>
+      ...
+    </Col>
+    <Col xs={2}>
+      ...
+    </Col>
+  </Row>
+</Grid>
+```
+
+#### Between
+```js
+<Grid>
+  <Row xsBetween>
+    <Col xs={2}>
+      ...
+    </Col>
+    <Col xs={2}>
+      ...
+    </Col>
+    <Col xs={2}>
+      ...
+    </Col>
+  </Row>
+</Grid>
+```
+
+### Reordering
+Add properties to reorder columns.
+
+#### First
+```js
+<Grid>
+  <Row>
+    <Col xs={4}>
+      1
+    </Col>
+    <Col xs={4}>
+      2
+    </Col>
+    <Col xs={4} xsFirst>
+      3
+    </Col>
+  </Row>
+</Grid>
+```
+
+#### Last
+```js
+<Grid>
+  <Row>
+    <Col xs={4} xsLast>
+      1
+    </Col>
+    <Col xs={4}>
+      2
+    </Col>
+    <Col xs={4}>
+      3
+    </Col>
+  </Row>
+</Grid>
+```
+
+### Reversing
+```js
+<Grid>
+  <Row reverse>
+    <Col xs={4}>
+      1
+    </Col>
+    <Col xs={4}>
+      2
+    </Col>
+    <Col xs={4}>
+      3
+    </Col>
+  </Row>
+</Grid>
+```
+
+## Example project
+
+First, clone react-bem-grid, install dependencies and build the project:
+
+```sh
 git clone https://github.com/nordnet/react-bem-grid.git
 npm install
 npm run build
@@ -44,7 +286,7 @@ npm run build
 
 Then run the simple-grid example project:
 
-```
+```sh
 cd examples/simple-grid
 npm install
 npm start
