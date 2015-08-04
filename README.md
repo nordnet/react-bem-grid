@@ -17,7 +17,7 @@ npm install --save react-bem-grid
 
 ```js
 import React from 'react';
-import { Row, Col, Grid } from 'react-bem-grid';
+import { Grid, Row, Col } from 'react-bem-grid';
 
 class GridExample extends React.Component {
   render() {
@@ -41,6 +41,25 @@ class GridExample extends React.Component {
 ```
 
 ## Documentation
+- [Responsive](#responsive)
+- [Offsets](#offsets)
+- [Auto Width](#auto-width)
+- [Nested Grids](#nested-grids)
+- [Custom Element Type](#custom-element-type)
+- [Alignment](#alignment)
+  - [Start](#start)
+  - [Center](#center)
+  - [End](#end)
+  - [Top](#top)
+  - [Middle](#middle)
+  - [Bottom](#bottom)
+- [Distribution](#distribution)
+  - [Around](#around)
+  - [Between](#between)
+- [Reordering](#reordering)
+  - [First](#first)
+  - [Last](#last)
+- [Reversing](#reversing)
 
 ### Responsive
 Responsive modifiers enable specifying different column sizes, offsets, alignment and distribution at xs, sm, md & lg viewport widths.
@@ -92,10 +111,27 @@ Nest grids inside grids inside grids.
     <Col xs={12}>
       <Row>
         <Col xs={6}>
-          ...
+          <Row>
+            <Col xs={4}>
+              ...
+            </Col>
+            <Col xs={4}>
+              ...
+            </Col>
+            <Col xs={4}>
+              ...
+            </Col>
+          </Row>
         </Col>
         <Col xs={6}>
-          ...
+        <Row>
+          <Col xs={6}>
+            ...
+          </Col>
+          <Col xs={6}>
+            ...
+          </Col>
+        </Row>
         </Col>
       </Row>
     </Col>
