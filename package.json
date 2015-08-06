@@ -52,6 +52,7 @@
     "coveralls": "^2.11.3",
     "eslint": "^0.24.0",
     "eslint-config-airbnb": "^0.0.7",
+    "eslint-config-nordnet": "0.0.3",
     "eslint-plugin-react": "^3.1.0",
     "husky": "^0.8.1",
     "isparta": "^3.0.3",
