@@ -58,8 +58,8 @@ $grid-containers: (
   flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-right: ($grid-gutter / -2);
-  margin-left: ($grid-gutter / -2);
+  margin-right: ($grid-gutter / -4);
+  margin-left: ($grid-gutter / -4);
 
   &--reverse {
     flex-direction: row-reverse;
@@ -90,8 +90,8 @@ $grid-containers: (
     #{$col-selectors} {
       box-sizing: border-box;
       flex: 0 0 auto;
-      padding-right: ($grid-gutter / 2);
-      padding-left: ($grid-gutter / 2);
+      padding-right: ($grid-gutter / 4);
+      padding-left: ($grid-gutter / 4);
     }
 
     .grid__col {
