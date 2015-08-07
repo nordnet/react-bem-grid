@@ -9,7 +9,9 @@
     }
   },
   "scripts": {
-    "start": "node webpack/webpack-dev-server.js"
+    "start": "node webpack/webpack-dev-server.js",
+    "build": "NODE_ENV=production npm run webpack",
+    "webpack": "webpack --colors --progress --config ./webpack/webpack.config.js"
   },
   "dependencies": {
     "highlight.js": "^8.7.0",
@@ -22,6 +24,7 @@
     "babel": "^5.8.20",
     "babel-loader": "^5.3.2",
     "css-loader": "^0.15.6",
+    "html-webpack-plugin": "^1.6.1",
     "opn": "^3.0.2",
     "react-hot-loader": "^1.2.7",
     "style-loader": "^0.12.3",

@@ -7,23 +7,30 @@ var pkg = require('./../package.json');
 var port = pkg.config.dev_server.port;
 var host = pkg.config.dev_server.host;
 
-module.exports = {
-  context: path.join(__dirname, '../src'),
-  devtool: 'eval',
-  entry: [
+var DEBUG = process.env.NODE_ENV !== 'production';
+
+var entry = [
+  './index',
+];
+
+if (DEBUG) {
+  entry.push(
     'webpack-dev-server/client?' + util.format('http://%s:%d', host, port),
-    'webpack/hot/only-dev-server',
-    './index',
-  ],
+    'webpack/hot/only-dev-server');
+}
+
+var plugins = require('./plugins');
+
+module.exports = {
+  context: path.join(__dirname, './../src'),
+  devtool:  DEBUG ? 'inline-source-map' : 'hidden-source-map',
+  entry: entry,
   output: {
-    path: path.join(__dirname, '../dist'),
+    path: path.resolve('./dist'),
     filename: 'bundle.js',
-    publicPath: '/static/',
+    publicPath: '/',
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
-  ],
+  plugins: plugins,
   resolve: {
     alias: {
       'react-bem-grid': path.join(__dirname, '../../../dist'),
