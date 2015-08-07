@@ -1,0 +1,50 @@
+#documentation {
+  font-family: 'Roboto', sans-serif;
+}
+
+hr {
+  border: 0;
+  background: #AAA;
+  height: 1px;
+  margin: .5rem 0;
+}
+
+.documentation__header {
+  text-align: center;
+  padding: 4rem 0;
+  background: #00A8EF;
+  color: #fff;
+
+  h1 {
+    margin: 0;
+    font-size: 3rem;
+  }
+
+  p {
+    margin-bottom: 2rem;
+
+    > a {
+      color: inherit;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 2px;
+  padding: .5rem;
+  background: #fff;
+  color: #00A8EF;
+  text-decoration: none;
+  font-weight: bold;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all .25s linear;
+
+  &:hover {
+    background: rgba(#fff, .9);
+    color: #00A8EF;
+  }
+}

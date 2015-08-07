@@ -25,8 +25,10 @@
     "babel-loader": "^5.3.2",
     "css-loader": "^0.15.6",
     "html-webpack-plugin": "^1.6.1",
+    "node-sass": "^3.2.0",
     "opn": "^3.0.2",
     "react-hot-loader": "^1.2.7",
+    "sass-loader": "^2.0.0",
     "style-loader": "^0.12.3",
     "webpack": "^1.9.11",
     "webpack-dev-server": "^1.9.0"
