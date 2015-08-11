@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-bem-grid';
 import './documentation.scss';
+import './navigation.scss';
 
 import Responsive from './Responsive';
 import Offsets from './Offsets';
@@ -21,6 +22,76 @@ import ReorderingLast from './Reordering-last';
 import Reversing from './Reversing';
 
 class Documentation extends React.Component {
+  renderIndex() {
+    const docs = [
+      {title: 'Responsive'},
+      {title: 'Offsets'},
+      {title: 'AutoWidths'},
+      {title: 'NestedGrids'},
+      {title: 'ElementType'},
+      {title: 'Alignment',
+      subTitles: [
+        'Start',
+        'Center',
+        'End',
+        'All',
+        'Top',
+        'Middle',
+        'Bottom',
+      ]},
+      {title: 'Distribution',
+      subTitles: [
+        'Around',
+        'Between',
+      ]},
+      {title: 'Reordering',
+      subTitles: [
+        'First',
+        'Last',
+      ]},
+      {title: 'Reversing'},
+    ];
+
+    return (
+      <Grid style={{
+          boxSizing: 'border-box',
+          margin: '0 auto',
+          padding: '0 .5rem',
+        }}>
+        <nav>
+          <Row componentClass="ul" className="navigation">
+            {docs.map(doc =>
+              <Col xs>
+                <div className="navigation__item" >
+                  <li>
+                    <a href={ generateURL(doc.title) }>{ generateName(doc.title) }</a>
+                  </li>
+                  { this.renderSubTitles(doc) }
+                </div>
+              </Col>
+            )}
+          </Row>
+        </nav>
+      </Grid>
+    );
+  }
+
+  renderSubTitles(doc) {
+    if (!doc.subTitles) {
+      return null;
+    }
+
+    return (
+      <ul>
+        {doc.subTitles.map(subTitle =>
+          <li>
+            <a href={ generateURL(subTitle) }>{ generateName(subTitle) }</a>
+          </li>
+        )}
+      </ul>
+    );
+  }
+
   renderHeader() {
     return (
       <header className="documentation__header">
@@ -52,11 +123,12 @@ class Documentation extends React.Component {
     return (
       <div>
         { this.renderHeader() }
+        { this.renderIndex() }
 
         <Grid style={{
             boxSizing: 'border-box',
             margin: '0 auto',
-            padding: '0 1rem'
+            padding: '0 1rem',
           }}>
 
           <Responsive />
@@ -79,7 +151,7 @@ class Documentation extends React.Component {
 
           <hr />
 
-          <h2>Alignment</h2>
+          <h2 id="alignment">Alignment</h2>
           <p>Add properties to align elements to the start or end of a row as well as the top, bottom, or center of a column.</p>
           <AlignmentStart />
           <AlignmentCenter />
@@ -91,14 +163,14 @@ class Documentation extends React.Component {
 
           <hr />
 
-          <h2>Distribution</h2>
+          <h2 id="distribution">Distribution</h2>
           <p>Add properties to distribute the contents of a row or column.</p>
           <DistributionAround />
           <DistributionBetween />
 
           <hr />
 
-          <h2>Reordering</h2>
+          <h2 id="reordering">Reordering</h2>
           <p>Add properties to reorder columns.</p>
           <ReorderingFirst />
           <ReorderingLast />
@@ -111,6 +183,14 @@ class Documentation extends React.Component {
       </div>
     );
   }
+}
+
+function generateURL(title) {
+  return '#' + title.replace(/([A-Z])/g, ' $1').trim().replace(' ', '-').toLowerCase();
+}
+
+function generateName(title) {
+  return title.replace(/([A-Z])/g, ' $1').trim();
 }
 
 export default Documentation;

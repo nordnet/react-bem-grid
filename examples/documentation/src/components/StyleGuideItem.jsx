@@ -7,7 +7,7 @@ import './style-guide-item.scss';
 class StyleGuideItem extends React.Component {
   renderTitle() {
     if (this.props.title) {
-      const id = this.props.title.toLowerCase().replace(' ', '-');
+      const id = this.props.id || this.props.title.toLowerCase().replace(' ', '-');
 
       return (
         <a href={ '#' + id } className="style-guide-item__link">
@@ -17,7 +17,7 @@ class StyleGuideItem extends React.Component {
     }
 
     if (this.props.subTitle) {
-      const id = this.props.subTitle.toLowerCase().replace(' ', '-');
+      const id = this.props.id || this.props.subTitle.toLowerCase().replace(' ', '-');
 
       return (
         <a href={ '#' + id } className="style-guide-item__link">
