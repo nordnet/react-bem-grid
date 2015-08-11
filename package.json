@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "npm-run-all transpile styles",
+    "build": "npm-run-all transpile styles build:umd",
+    "build:umd": "webpack --config ./webpack.config src/index.js dist/react-bem-grid.js && NODE_ENV=production webpack --config ./webpack.config src/index.js dist/react-bem-grid.min.js",
     "transpile": "babel src --out-dir dist",
     "sass": "node-sass src -o dist --output-style expanded --precision 3",
     "autoprefixer": "postcss -u autoprefixer -o dist/Grid.css dist/Grid.css",
@@ -69,6 +70,7 @@
     "postcss-cli": "^1.5.0",
     "rimraf": "^2.3.4",
     "sinon": "^1.15.4",
-    "sinon-chai": "^2.8.0"
+    "sinon-chai": "^2.8.0",
+    "webpack": "^1.11.0"
   }
 }
