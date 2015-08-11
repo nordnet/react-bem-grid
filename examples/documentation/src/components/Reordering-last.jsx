@@ -5,21 +5,19 @@ import StyleGuideItem from './StyleGuideItem';
 
 class ReorderingLast extends React.Component {
   render() {
-    const simplifiedMarkup = (
-      <Grid>
-        <Row>
-          <Col xs={4} xsLast>
-            1
-          </Col>
-          <Col xs={4}>
-            2
-          </Col>
-          <Col xs={4}>
-            3
-          </Col>
-        </Row>
-      </Grid>
-    );
+    const simplifiedMarkup = `<Grid>
+  <Row>
+    <Col xs={4} xsLast>
+      1
+    </Col>
+    <Col xs={4}>
+      2
+    </Col>
+    <Col xs={4}>
+      3
+    </Col>
+  </Row>
+</Grid>`;
 
     const markup = (
       <Row>

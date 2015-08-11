@@ -5,19 +5,17 @@ import StyleGuideItem from './StyleGuideItem'
 
 class AlignmentAll extends React.Component {
   render() {
-    const simplifiedMarkup = (
-      <Grid>
-        <Row>
-          <Col xs={12}>
-            <Row xsCenter smEnd lgStart>
-              <Col xs={6}>
-                ...
-              </Col>
-            </Row>
-          </Col>
-        </Row>
-      </Grid>
-    );
+    const simplifiedMarkup = `<Grid>
+  <Row>
+    <Col xs={12}>
+      <Row xsCenter smEnd lgStart>
+        <Col xs={6}>
+          ...
+        </Col>
+      </Row>
+    </Col>
+  </Row>
+</Grid>`;
 
     const markup = (
       <Row>

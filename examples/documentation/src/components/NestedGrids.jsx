@@ -5,39 +5,37 @@ import StyleGuideItem from './StyleGuideItem'
 
 class NestedGrids extends React.Component {
   render() {
-    const simplifiedMarkup = (
-      <Grid>
+    const simplifiedMarkup = `<Grid>
+  <Row>
+    <Col xs={12}>
+      <Row>
+        <Col xs={6}>
+          <Row>
+            <Col xs={4}>
+              ...
+            </Col>
+            <Col xs={4}>
+              ...
+            </Col>
+            <Col xs={4}>
+              ...
+            </Col>
+          </Row>
+        </Col>
+        <Col xs={6}>
         <Row>
-          <Col xs={12}>
-            <Row>
-              <Col xs={6}>
-                <Row>
-                  <Col xs={4}>
-                    ...
-                  </Col>
-                  <Col xs={4}>
-                    ...
-                  </Col>
-                  <Col xs={4}>
-                    ...
-                  </Col>
-                </Row>
-              </Col>
-              <Col xs={6}>
-              <Row>
-                <Col xs={6}>
-                  ...
-                </Col>
-                <Col xs={6}>
-                  ...
-                </Col>
-              </Row>
-              </Col>
-            </Row>
+          <Col xs={6}>
+            ...
+          </Col>
+          <Col xs={6}>
+            ...
           </Col>
         </Row>
-      </Grid>
-    );
+        </Col>
+      </Row>
+    </Col>
+  </Row>
+</Grid>`;
 
     const markup = (
       <Row>

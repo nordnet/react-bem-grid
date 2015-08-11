@@ -5,21 +5,19 @@ import StyleGuideItem from './StyleGuideItem';
 
 class DistributionBetween extends React.Component {
   render() {
-    const simplifiedMarkup = (
-      <Grid>
-        <Row xsBetween>
-          <Col xs={2}>
-            ...
-          </Col>
-          <Col xs={2}>
-            ...
-          </Col>
-          <Col xs={2}>
-            ...
-          </Col>
-        </Row>
-      </Grid>
-    );
+    const simplifiedMarkup = `<Grid>
+  <Row xsBetween>
+    <Col xs={2}>
+      ...
+    </Col>
+    <Col xs={2}>
+      ...
+    </Col>
+    <Col xs={2}>
+      ...
+    </Col>
+  </Row>
+</Grid>`;
 
     const markup = (
       <Row xsBetween>

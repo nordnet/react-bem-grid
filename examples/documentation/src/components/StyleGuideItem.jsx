@@ -36,15 +36,10 @@ class StyleGuideItem extends React.Component {
   }
 
   renderCode() {
-    if (this.props.simplifiedMarkup || this.props.children) {
-      const jsxStringOptions = {
-        indent: '  ',
-      };
-      const jsxString = reactToJsx(this.props.simplifiedMarkup, jsxStringOptions) || reactToJsx(this.props.children, jsxStringOptions);
-
+    if (this.props.simplifiedMarkup) {
       return (
         <Highlight className='style-guide-item__code'>
-          { jsxString }
+          { this.props.simplifiedMarkup }
         </Highlight>
       );
     }

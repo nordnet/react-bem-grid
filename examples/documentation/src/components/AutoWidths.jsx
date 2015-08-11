@@ -5,21 +5,19 @@ import StyleGuideItem from './StyleGuideItem'
 
 class AutoWidths extends React.Component {
   render() {
-    const simplifiedMarkup = (
-      <Grid>
-        <Row>
-          <Col xs>
-            ...
-          </Col>
-          <Col xs>
-            ...
-          </Col>
-          <Col xs>
-            ...
-          </Col>
-        </Row>
-      </Grid>
-    );
+    const simplifiedMarkup = `<Grid>
+  <Row>
+    <Col xs>
+      ...
+    </Col>
+    <Col xs>
+      ...
+    </Col>
+    <Col xs>
+      ...
+    </Col>
+  </Row>
+</Grid>`;
 
     const markup = (
       <div>

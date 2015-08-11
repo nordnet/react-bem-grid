@@ -5,18 +5,16 @@ import StyleGuideItem from './StyleGuideItem';
 
 class AlignmentTop extends React.Component {
   render() {
-    const simplifiedMarkup = (
-      <Grid>
-        <Row xsTop>
-          <Col xs={6}>
-            ...
-          </Col>
-          <Col xs={6}>
-            ...
-          </Col>
-        </Row>
-      </Grid>
-    );
+    const simplifiedMarkup = `<Grid>
+  <Row xsTop>
+    <Col xs={6}>
+      ...
+    </Col>
+    <Col xs={6}>
+      ...
+    </Col>
+  </Row>
+</Grid>`;
 
     const markup = (
       <Row xsTop>

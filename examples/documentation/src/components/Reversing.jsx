@@ -5,21 +5,19 @@ import StyleGuideItem from './StyleGuideItem'
 
 class Reversing extends React.Component {
   render() {
-    const simplifiedMarkup = (
-      <Grid>
-        <Row reverse>
-          <Col xs={2}>
-            1
-          </Col>
-          <Col xs={2}>
-            2
-          </Col>
-          <Col xs={2}>
-            3
-          </Col>
-        </Row>
-      </Grid>
-    );
+    const simplifiedMarkup = `<Grid>
+  <Row reverse>
+    <Col xs={2}>
+      1
+    </Col>
+    <Col xs={2}>
+      2
+    </Col>
+    <Col xs={2}>
+      3
+    </Col>
+  </Row>
+</Grid>`;
 
     const markup = (
       <Row>

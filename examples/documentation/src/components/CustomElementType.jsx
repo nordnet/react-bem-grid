@@ -5,18 +5,16 @@ import StyleGuideItem from './StyleGuideItem'
 
 class CustomElementType extends React.Component {
   render() {
-    const simplifiedMarkup = (
-      <Grid>
-        <Row componentClass='nav'>
-          <Col xs={6}>
-            ...
-          </Col>
-          <Col xs={6}>
-            ...
-          </Col>
-        </Row>
-      </Grid>
-    );
+    const simplifiedMarkup = `<Grid>
+  <Row componentClass='nav'>
+    <Col xs={6}>
+      ...
+    </Col>
+    <Col xs={6}>
+      ...
+    </Col>
+  </Row>
+</Grid>`;
 
     const markup = (
       <Row componentClass='nav'>

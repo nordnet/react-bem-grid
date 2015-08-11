@@ -5,15 +5,13 @@ import StyleGuideItem from './StyleGuideItem'
 
 class Offsets extends React.Component {
   render() {
-    const simplifiedMarkup = (
-      <Grid>
-        <Row>
-          <Col xs={8} xsOffset={4} sm={6} smOffset={6} lg={12}>
-            ...
-          </Col>
-        </Row>
-      </Grid>
-    );
+    const simplifiedMarkup = `<Grid>
+  <Row>
+    <Col xs={8} xsOffset={4} sm={6} smOffset={6} lg={12}>
+      ...
+    </Col>
+  </Row>
+</Grid>`;
 
     const markup = (
       <div>

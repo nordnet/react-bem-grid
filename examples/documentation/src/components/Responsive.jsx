@@ -5,15 +5,13 @@ import StyleGuideItem from './StyleGuideItem'
 
 class Responsive extends React.Component {
   render() {
-    const simplifiedMarkup = (
-      <Grid>
-        <Row>
-          <Col xs={12} sm={8} md={6} lg={4}>
-            ...
-          </Col>
-        </Row>
-      </Grid>
-    );
+    const simplifiedMarkup = `<Grid>
+  <Row>
+    <Col xs={12} sm={8} md={6} lg={4}>
+      ...
+    </Col>
+  </Row>
+</Grid>`;
 
     const markup = (
       <div>
