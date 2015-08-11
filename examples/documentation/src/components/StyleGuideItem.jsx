@@ -1,6 +1,5 @@
 import React from 'react';
 import Highlight from 'react-highlight';
-import reactToJsx from 'react-to-jsx';
 import './hljs.css';
 import './style-guide-item.scss';
 
