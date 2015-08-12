@@ -1,7 +1,7 @@
 {
   "name": "react-bem-grid",
   "version": "0.0.5",
-  "description": "",
+  "description": "A BEM-ified port of Flexbox Grid to a simple, reusable React component.",
   "main": "dist/index.js",
   "scripts": {
     "clean": "rimraf dist",
