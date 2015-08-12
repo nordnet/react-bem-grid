@@ -1,11 +1,11 @@
 # React BEM Grid
 
-[![NPM version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Coveralls Status][coveralls-image]][coveralls-url]
-[![Dependency Status][depstat-image]][depstat-url]
+> A BEM-ified port of [Flexbox Grid][flexbox-grid] to a simple, reusable [React][react] component.
 
-A BEM-ified port of [Flexbox Grid](http://flexboxgrid.com) to a simple, reusable React component.
+[![NPM version][npm-badge]][npm-url]
+[![Build Status][travis-badge]][travis-url]
+[![Coveralls Status][coveralls-badge]][coveralls-url]
+[![Dependency Status][depstat-badge]][depstat-url]
 
 ### NPM
 
@@ -39,6 +39,8 @@ class GridExample extends React.Component {
   }
 }
 ```
+
+Include the css file in the way that best suits your project, if you're using [Webpack][webpack], we recommend using [CSS loader][css-loader].
 
 ## Documentation
 - [Responsive](#responsive)
@@ -335,7 +337,7 @@ npm install
 npm run build
 ```
 
-Then run the simple-grid example project:
+Then run the simple-grid or documentation example project:
 
 ```sh
 cd examples/simple-grid
@@ -347,14 +349,19 @@ npm start
 
 MIT © [Nordnet Bank AB](https://www.nordnet.se/)
 
+[flexbox-grid]: http://flexboxgrid.com
+[react]: http://facebook.github.io/react/
+[webpack]: http://webpack.github.io/
+[css-loader]: https://github.com/webpack/css-loader
+
 [npm-url]: https://npmjs.org/package/react-bem-grid
-[npm-image]: https://img.shields.io/npm/v/react-bem-grid.svg?style=flat-square
+[npm-badge]: https://img.shields.io/npm/v/react-bem-grid.svg?style=flat-square
 
 [travis-url]: https://travis-ci.org/nordnet/react-bem-grid
-[travis-image]: https://img.shields.io/travis/nordnet/react-bem-grid.svg?style=flat-square
+[travis-badge]: https://img.shields.io/travis/nordnet/react-bem-grid.svg?style=flat-square
 
 [coveralls-url]: https://coveralls.io/r/nordnet/react-bem-grid
-[coveralls-image]: https://img.shields.io/coveralls/nordnet/react-bem-grid.svg?style=flat-square
+[coveralls-badge]: https://img.shields.io/coveralls/nordnet/react-bem-grid.svg?style=flat-square
 
 [depstat-url]: https://david-dm.org/nordnet/react-bem-grid
-[depstat-image]: https://david-dm.org/nordnet/react-bem-grid.svg?style=flat-square
+[depstat-badge]: https://david-dm.org/nordnet/react-bem-grid.svg?style=flat-square
