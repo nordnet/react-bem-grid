@@ -43,6 +43,9 @@ class GridExample extends React.Component {
 Include the css file in the way that best suits your project, if you're using [Webpack][webpack], we recommend using [CSS loader][css-loader].
 
 ## Documentation
+
+#### [See all the documentation including live examples](http://nordnet.github.io/react-bem-grid/)
+
 - [Responsive](#responsive)
 - [Offsets](#offsets)
 - [Auto Width](#auto-width)
