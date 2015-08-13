@@ -53,11 +53,7 @@ class Documentation extends React.Component {
     ];
 
     return (
-      <Grid style={{
-          boxSizing: 'border-box',
-          margin: '0 auto',
-          padding: '0 .5rem',
-        }}>
+      <Grid>
         <nav>
           <Row componentClass="ul" className="navigation">
             {docs.map(doc =>
@@ -125,11 +121,7 @@ class Documentation extends React.Component {
         { this.renderHeader() }
         { this.renderIndex() }
 
-        <Grid style={{
-            boxSizing: 'border-box',
-            margin: '0 auto',
-            padding: '0 1rem',
-          }}>
+        <Grid>
 
           <Responsive />
 

@@ -41,14 +41,15 @@ $grid-containers: (
   }
 }
 
-// Fluid grid
-.grid {
-  &--fluid {
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $grid-gutter;
-    padding-left: $grid-gutter;
-  }
+// Grid
+.grid,
+.grid--fluid {
+  margin: 0 auto;
+}
+
+.grid--fluid {
+  padding-right: $grid-gutter;
+  padding-left: $grid-gutter;
 }
 
 // Rows
