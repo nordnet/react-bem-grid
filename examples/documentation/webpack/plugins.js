@@ -6,7 +6,7 @@ var plugins = [
   new webpack.optimize.OccurenceOrderPlugin(),
   new HtmlWebpackPlugin({
     title: 'React BEM grid documentation',
-    minify: true,
+    minify: false,
   }),
 ];
 
@@ -22,8 +22,8 @@ if (DEBUG) {
   );
 } else {
   plugins.push(
-    new webpack.optimize.UglifyJsPlugin({ 
-      compress: { 
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
         warnings: false,
       },
     }),

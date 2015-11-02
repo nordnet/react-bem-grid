@@ -1,5 +1,6 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import GridExample from './components/grid-example';
 import '../../../dist/Grid.css';
 
-React.render(<GridExample />, document.getElementById('app'));
+ReactDOM.render(<GridExample />, document.getElementById('app'));

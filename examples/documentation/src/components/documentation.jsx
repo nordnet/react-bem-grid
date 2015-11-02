@@ -177,7 +177,7 @@ class Documentation extends React.Component {
   }
 }
 
-function generateURL(title) {
+function generateURL(title = '') {
   return '#' + title.replace(/([A-Z])/g, ' $1').trim().replace(' ', '-').toLowerCase();
 }
 

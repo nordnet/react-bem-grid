@@ -14,16 +14,18 @@
     "webpack": "webpack --colors --progress --config ./webpack/webpack.config.js"
   },
   "dependencies": {
-    "highlight.js": "^8.7.0",
+    "highlight.js": "^8.9.1",
     "lodash.merge": "^3.3.2",
-    "react": "^0.13.3",
-    "react-highlight": "^0.5.0"
+    "react": "~0.14",
+    "react-dom": "~0.14",
+    "react-highlight": "^0.5.1"
   },
   "devDependencies": {
-    "babel": "^5.8.20",
+    "babel": "^5.5.8",
+    "babel-core": "^5.6.18",
     "babel-loader": "^5.3.2",
     "css-loader": "^0.15.6",
-    "html-webpack-plugin": "^1.6.1",
+    "html-webpack-plugin": "^2.0.4",
     "node-sass": "^3.2.0",
     "opn": "^3.0.2",
     "react-hot-loader": "^1.2.7",

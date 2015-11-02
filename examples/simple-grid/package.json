@@ -12,7 +12,8 @@
     "start": "node webpack/webpack-dev-server.js"
   },
   "dependencies": {
-    "react": "^0.13.3"
+    "react": "~0.14",
+    "react-dom": "~0.14"
   },
   "devDependencies": {
     "babel": "^5.8.20",

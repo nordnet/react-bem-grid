@@ -1,5 +1,5 @@
 import React from 'react';
-import PureComponent from './PureComponent';
+import PureComponent from 'react-pure-render/component';
 import classNames from 'classnames';
 import { elementType } from 'react-prop-types';
 

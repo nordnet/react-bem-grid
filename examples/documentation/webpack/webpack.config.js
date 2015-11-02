@@ -34,7 +34,6 @@ module.exports = {
   resolve: {
     alias: {
       'react-bem-grid': path.join(__dirname, '../../../dist'),
-      'react': path.join(__dirname, '../node_modules/react'),
     },
     extensions: ['', '.js', '.jsx'],
   },
@@ -50,7 +49,7 @@ module.exports = {
       include: path.join(__dirname, '../src'),
     }, {
       test: /\.css$/,
-      loader: "style-loader!css-loader"
+      loader: "style!css"
     }, {
       test: /\.scss$/,
       loader: 'style!css!sass'
