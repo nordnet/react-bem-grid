@@ -43,6 +43,7 @@
   "homepage": "https://github.com/nordnet/react-bem-grid#readme",
   "dependencies": {
     "classnames": "^2.2.0",
+    "lodash.isnumber": "^3.0.1",
     "react": "~0.14",
     "react-dom": "~0.14",
     "react-prop-types": "^0.3.0",
