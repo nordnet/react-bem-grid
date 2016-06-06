@@ -19,7 +19,7 @@
     "lint": "npm-run-all jsc eslint",
     "test": "mocha",
     "tdd": "npm test -- --watch",
-    "validate": "npm-run-all lint test",
+    "validate": "npm-run-all test",
     "prepush": "npm run validate",
     "prepublish": "npm run build",
     "postpublish": "rimraf dist && git push --follow-tags"
@@ -44,8 +44,8 @@
   "dependencies": {
     "classnames": "^2.2.0",
     "lodash.isnumber": "^3.0.1",
-    "react": "~0.14",
-    "react-dom": "~0.14",
+    "react": "^15.0",
+    "react-dom": "^15.0",
     "react-prop-types": "^0.3.0",
     "react-pure-render": "^1.0.2"
   },
@@ -70,9 +70,14 @@
     "node-sass": "^3.2.0",
     "npm-run-all": "^1.2.6",
     "postcss-cli": "^1.5.0",
+    "react-addons-test-utils": "^15.1.0",
     "rimraf": "^2.3.4",
     "sinon": "^1.15.4",
     "sinon-chai": "^2.8.0",
     "webpack": "^1.11.0"
+  },
+  "peerDependencies": {
+    "react": "^0.14 || ^15.0",
+    "react-dom": "^0.14 || ^15.0"
   }
 }
