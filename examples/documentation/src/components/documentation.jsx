@@ -57,7 +57,7 @@ class Documentation extends React.Component {
         <nav>
           <Row componentClass="ul" className="navigation">
             {docs.map(doc =>
-              <Col xs>
+              <Col xs key={doc.title}>
                 <div className="navigation__item" >
                   <li>
                     <a href={ generateURL(doc.title) }>{ generateName(doc.title) }</a>
@@ -80,7 +80,7 @@ class Documentation extends React.Component {
     return (
       <ul>
         {doc.subTitles.map(subTitle =>
-          <li>
+          <li key={subTitle}>
             <a href={ generateURL(subTitle) }>{ generateName(subTitle) }</a>
           </li>
         )}
