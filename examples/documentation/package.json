@@ -14,11 +14,11 @@
     "webpack": "webpack --colors --progress --config ./webpack/webpack.config.js"
   },
   "dependencies": {
-    "highlight.js": "^8.9.1",
+    "highlight.js": "^9.6.0",
     "lodash.merge": "^3.3.2",
     "react": "^15.0",
     "react-dom": "^15.0",
-    "react-highlight": "^0.5.1"
+    "react-highlight": "^0.8.0"
   },
   "devDependencies": {
     "babel": "^5.5.8",
