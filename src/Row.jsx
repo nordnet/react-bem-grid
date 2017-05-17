@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import PureComponent from 'react-pure-render/component';
 import classNames from 'classnames';
 import { elementType } from 'react-prop-types';
@@ -61,51 +62,51 @@ class Row extends PureComponent {
 }
 
 Row.propTypes = {
-  reverse: React.PropTypes.bool,
-  className: React.PropTypes.string,
-  style: React.PropTypes.object,
-  children: React.PropTypes.node,
+  reverse: PropTypes.bool,
+  className: PropTypes.string,
+  style: PropTypes.object,
+  children: PropTypes.node,
   componentClass: elementType,
 
-  xsStart: React.PropTypes.bool,
-  smStart: React.PropTypes.bool,
-  mdStart: React.PropTypes.bool,
-  lgStart: React.PropTypes.bool,
+  xsStart: PropTypes.bool,
+  smStart: PropTypes.bool,
+  mdStart: PropTypes.bool,
+  lgStart: PropTypes.bool,
 
-  xsCenter: React.PropTypes.bool,
-  smCenter: React.PropTypes.bool,
-  mdCenter: React.PropTypes.bool,
-  lgCenter: React.PropTypes.bool,
+  xsCenter: PropTypes.bool,
+  smCenter: PropTypes.bool,
+  mdCenter: PropTypes.bool,
+  lgCenter: PropTypes.bool,
 
-  xsEnd: React.PropTypes.bool,
-  smEnd: React.PropTypes.bool,
-  mdEnd: React.PropTypes.bool,
-  lgEnd: React.PropTypes.bool,
+  xsEnd: PropTypes.bool,
+  smEnd: PropTypes.bool,
+  mdEnd: PropTypes.bool,
+  lgEnd: PropTypes.bool,
 
-  xsTop: React.PropTypes.bool,
-  smTop: React.PropTypes.bool,
-  mdTop: React.PropTypes.bool,
-  lgTop: React.PropTypes.bool,
+  xsTop: PropTypes.bool,
+  smTop: PropTypes.bool,
+  mdTop: PropTypes.bool,
+  lgTop: PropTypes.bool,
 
-  xsMiddle: React.PropTypes.bool,
-  smMiddle: React.PropTypes.bool,
-  mdMiddle: React.PropTypes.bool,
-  lgMiddle: React.PropTypes.bool,
+  xsMiddle: PropTypes.bool,
+  smMiddle: PropTypes.bool,
+  mdMiddle: PropTypes.bool,
+  lgMiddle: PropTypes.bool,
 
-  xsBottom: React.PropTypes.bool,
-  smBottom: React.PropTypes.bool,
-  mdBottom: React.PropTypes.bool,
-  lgBottom: React.PropTypes.bool,
+  xsBottom: PropTypes.bool,
+  smBottom: PropTypes.bool,
+  mdBottom: PropTypes.bool,
+  lgBottom: PropTypes.bool,
 
-  xsAround: React.PropTypes.bool,
-  smAround: React.PropTypes.bool,
-  mdAround: React.PropTypes.bool,
-  lgAround: React.PropTypes.bool,
+  xsAround: PropTypes.bool,
+  smAround: PropTypes.bool,
+  mdAround: PropTypes.bool,
+  lgAround: PropTypes.bool,
 
-  xsBetween: React.PropTypes.bool,
-  smBetween: React.PropTypes.bool,
-  mdBetween: React.PropTypes.bool,
-  lgBetween: React.PropTypes.bool,
+  xsBetween: PropTypes.bool,
+  smBetween: PropTypes.bool,
+  mdBetween: PropTypes.bool,
+  lgBetween: PropTypes.bool,
 };
 
 Row.defaultProps = {
