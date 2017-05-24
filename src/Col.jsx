@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import PureComponent from 'react-pure-render/component';
 import classNames from 'classnames';
 import { elementType } from 'react-prop-types';
@@ -41,44 +42,44 @@ class Col extends PureComponent {
 }
 
 Col.propTypes = {
-  className: React.PropTypes.string,
-  style: React.PropTypes.object,
-  children: React.PropTypes.node,
+  className: PropTypes.string,
+  style: PropTypes.object,
+  children: PropTypes.node,
   componentClass: elementType,
 
-  xs: React.PropTypes.oneOfType([
-    React.PropTypes.number,
-    React.PropTypes.bool,
+  xs: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.bool,
   ]),
-  sm: React.PropTypes.oneOfType([
-    React.PropTypes.number,
-    React.PropTypes.bool,
+  sm: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.bool,
   ]),
-  md: React.PropTypes.oneOfType([
-    React.PropTypes.number,
-    React.PropTypes.bool,
+  md: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.bool,
   ]),
-  lg: React.PropTypes.oneOfType([
-    React.PropTypes.number,
-    React.PropTypes.bool,
+  lg: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.bool,
   ]),
 
-  xsOffset: React.PropTypes.number,
-  smOffset: React.PropTypes.number,
-  mdOffset: React.PropTypes.number,
-  lgOffset: React.PropTypes.number,
+  xsOffset: PropTypes.number,
+  smOffset: PropTypes.number,
+  mdOffset: PropTypes.number,
+  lgOffset: PropTypes.number,
 
-  reverse: React.PropTypes.bool,
+  reverse: PropTypes.bool,
 
-  xsFirst: React.PropTypes.bool,
-  smFirst: React.PropTypes.bool,
-  mdFirst: React.PropTypes.bool,
-  lgFirst: React.PropTypes.bool,
+  xsFirst: PropTypes.bool,
+  smFirst: PropTypes.bool,
+  mdFirst: PropTypes.bool,
+  lgFirst: PropTypes.bool,
 
-  xsLast: React.PropTypes.bool,
-  smLast: React.PropTypes.bool,
-  mdLast: React.PropTypes.bool,
-  lgLast: React.PropTypes.bool,
+  xsLast: PropTypes.bool,
+  smLast: PropTypes.bool,
+  mdLast: PropTypes.bool,
+  lgLast: PropTypes.bool,
 };
 
 Col.defaultProps = {

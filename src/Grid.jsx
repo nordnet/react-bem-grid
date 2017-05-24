@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import PureComponent from 'react-pure-render/component';
 import classNames from 'classnames';
+
 import { elementType } from 'react-prop-types';
 
 class Grid extends PureComponent {
@@ -21,10 +23,10 @@ class Grid extends PureComponent {
 }
 
 Grid.propTypes = {
-  fluid: React.PropTypes.bool,
-  className: React.PropTypes.string,
-  style: React.PropTypes.object,
-  children: React.PropTypes.node,
+  fluid: PropTypes.bool,
+  className: PropTypes.string,
+  style: PropTypes.object,
+  children: PropTypes.node,
   componentClass: elementType,
 };
 
