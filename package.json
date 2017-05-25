@@ -45,6 +45,7 @@
     "classnames": "^2.2.0",
     "lodash.isnumber": "^3.0.1",
     "prop-types": "^15.5.10",
+    "react-prop-types": "^0.3.0",
     "react-pure-render": "^1.0.2"
   },
   "devDependencies": {
@@ -71,7 +72,6 @@
     "react": "^15.5",
     "react-addons-test-utils": "^15.5",
     "react-dom": "^15.5",
-    "react-prop-types": "^0.3.0",
     "rimraf": "^2.3.4",
     "sinon": "^1.15.4",
     "sinon-chai": "^2.8.0",
